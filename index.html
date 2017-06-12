@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Барбершоп "Бородинский"</title>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic">
-    <link rel="stylesheet" type="text/css" href="normalize.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
     <header class="main-header">
@@ -13,7 +13,7 @@
         <nav class="main-navigation">
           <ul>
             <li>
-              <a href="#">Главная</a>
+              <a href="index.html">Главная</a>
             </li>
             <li>
               <a href="#">Информация</a>
@@ -22,10 +22,10 @@
               <a href="#">Новости</a>
             </li>
             <li>
-              <a href="#">Прайс-лист</a>
+              <a href="price.html">Прайс-лист</a>
             </li>
             <li>
-              <a href="#">Магазин</a>
+              <a href="shop.html">Магазин</a>
             </li>
             <li>
               <a href="#">Контакты</a>
@@ -33,13 +33,13 @@
           </ul>
         </nav>
         <div class="user-block">
-          <a class="login" href="#">Вход</a>
+          <a class="login" href="login-page-no-js.html">Вход</a>
         </div>
       </div>
     </header>
     <main class="container">
      <div class="index-logo">
-       <img src="img/index-logo.png" widht="368" height="204" alt="Барбершоп "Бородинский"">
+       <img src="img/index-logo.png" width="368" height="204" alt="Барбершоп &laquo;Бородинский&raquo;">
      </div>
      <section class="features clearfix">
        <section class="features-item">
@@ -77,15 +77,23 @@
              <p>В нашей команде пополнение, Борис "Бритва" Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды</p>
              <time datetime="2016-09-19">19 сентября</time>
            </li>
+         </ul>
          <a class="btn" href="#">Все новости</a>
        </div>
        <div class="index-content-right">
          <h2 class="index-content-title">Фотогалерея</h2>
          <div class="gallery">
            <figure class="gallery-content">
-             <img src="img/photo-1.jpg" width="286" height="164" alt="">
+             <a href="#"><img src="img/photo-1.jpg" width="143" height="82" alt="gallery-photo"></a>
+             <a href="#"><img src="img/photo-1.jpg" width="143" height="82" alt="gallery-photo"></a>
+             <a href="#"><img src="img/photo-1.jpg" width="143" height="82" alt="gallery-photo"></a>
+             <a href="#"><img src="img/photo-1.jpg" width="143" height="82" alt="gallery-photo"></a>
+             <a href="#"><img src="img/photo-1.jpg" width="143" height="82" alt="gallery-photo"></a>
+             <a href="#"><img src="img/photo-1.jpg" width="143" height="82" alt="gallery-photo"></a>
            </figure>
-           <button class="btn gallery-prev">Назад</button>
+
+           <!-- the buttons will be added with JS !-->
+           <button class="btn gallery-prev disable">Назад</button>
            <button class="btn gallery-next">Вперед</button>
          </div>
        </div>
@@ -103,7 +111,7 @@
            Пн - Пт: с 10:00 до 20:00<br>
            Сб - Вс: с 10:00 до 18:00<br>
          </p>
-         <a class="btn" href="#">Как проехать</a>
+         <a class="btn js-open-map" href="map-page-no-js.html">Как проехать</a>
          <a class="btn" href="#">Обратная связь</a>
        </div>
        <div class="index-content-right">
@@ -126,7 +134,7 @@
        <section class="footer-contacts">
          Барбершоп "Бородинский"<br>
          Адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-         <a href="#">Как нас найти</a><br>
+         <a class="js-open-map" href="map-page-no-js.html">Как нас найти</a><br>
          Телефон: +7 (495) 666-02-66
        </section>
        <section class="footer-social">
@@ -136,10 +144,9 @@
          <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
          </section>
          <section class="footer-copyright">
-           <p>Разработано: </p>
+           <p>Разработано:</p>
            <a class="btn" href="https://htmlacademy.ru">htmlacademy.ru</a>
          </section>
-       </div>
      </div>
    </footer>
    <div class="modal-content">
@@ -160,8 +167,13 @@
    </div>
    <div class="modal-content-map">
      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123825!2d30.320894615863722!3d59.93879686904818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1495723133438" width="766" height="561" frameborder="0" style="border:0" allowfullscreen></iframe>
      <div id="yandex-map"></div>
    </div>
    <div class="modal-overlay"></div>
+
+   <script src="js/popup.min.js"></script>
+   <script src="js/index-gallery.min.js"></script>
+
   </body>
 </html>
